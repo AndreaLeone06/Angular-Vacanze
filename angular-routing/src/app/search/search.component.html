@@ -5,12 +5,12 @@
   <button (click)="submit(newquery)">Search</button>
 </p>
 
-<div ngIf="results">
+<div *ngIf="results">
   <divngIf="!results.tracks || results.tracks.items.length ==0">
     No tracks were found with the term '{{ query }}'
   </div>
 
-  <div ngIf="results.tracks &&  results.tracks.items.length > 0">
+  <div *ngIf="results.tracks &&  results.tracks.items.length > 0">
     <h1>Results</h1>
     <div class="row">
       <div class="col-sm-6 col-md-4"ngFor="let t of results.tracks.items">
