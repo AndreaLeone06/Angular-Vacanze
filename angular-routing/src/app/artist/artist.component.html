@@ -1,1 +1,11 @@
-<p>artist works!</p>
+<div *ngIf="result">
+    <h1>{{ result.name }}</h1>
+    <p>
+        <img src="{{ result.images[1].url }}">
+    </p>
+    <h2>Genres</h2>
+    <div *ngFor='let art of result.genres'>
+        <p>{{art}}</p>
+    </div>
+    <p><a href (click)="back()">Back</a></p>
+</div>
